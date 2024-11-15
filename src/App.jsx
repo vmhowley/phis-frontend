@@ -40,7 +40,8 @@ function App() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(data).toString()
     })
-      .then(() => alert("Success!"))
+      .then(() =>     window.location.replace('https://www.instagram.com/p/C6rCOKlAAsG/')
+    )
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -50,7 +51,6 @@ function App() {
    }finally{
     // for demonstration purposes, remove in production code.  //send success message to user
     setData({}) // clear form inputs after successful submission
-    window.location.replace('https://www.instagram.com/p/C6rCOKlAAsG/')
     e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
  
   }
