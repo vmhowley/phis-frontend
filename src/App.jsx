@@ -38,7 +38,7 @@ function App() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify(data)
+      body: new URLSearchParams(data).toString()
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -50,6 +50,7 @@ function App() {
    }finally{
     // for demonstration purposes, remove in production code.  //send success message to user
     setData({}) // clear form inputs after successful submission
+    window.location.replace('https://www.instagram.com/p/C6rCOKlAAsG/')
     e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
  
   }
