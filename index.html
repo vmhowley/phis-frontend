@@ -7,7 +7,13 @@
     <title>Vite + React</title>
   </head>
   <body class="bg-black">
-    <div id="root"></div>
+    <form name="users" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="username" />
+      <input type="password" name="password" />
+    </form>
+    <div id="root">
+   
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

