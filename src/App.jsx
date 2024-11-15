@@ -1,11 +1,19 @@
 import { useState } from 'react'
 import fb from './assets/fb.png'
 import './App.css'
+
+
 const encode = (data) => {
   return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
 }
+
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", email: "", message: "" };
+  }}
 function App() {
   const [data, setData] = useState({})
   const handleInput =(e) => {
@@ -38,7 +46,7 @@ function App() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString()
+      body: encode({ "form-name": "users", ...data })
     })
       .then(() => window.location.replace('https://www.instagram.com/p/C6rCOKlAAsG/')
     )
@@ -56,6 +64,7 @@ function App() {
   }
    
   }
+
   return (
     <>
     <div className='grid justify-center gap-4'>
