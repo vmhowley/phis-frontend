@@ -30,6 +30,26 @@ function App() {
     setData({}) // clear form inputs after successful submission
     e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
    }
+   try{
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "users", ...e.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  }catch(e){
+    console.log(e)
+    console.log('usuario no se  almaceno')
+   }finally{
+    // for demonstration purposes, remove in production code.  //send success message to user
+    setData({}) // clear form inputs after successful submission
+    e.preventDefault()  // prevent form from refreshing the page on submission  // prevent form from refreshing the page on submission
+ 
+  }
+   }
   }
   return (
     <>
